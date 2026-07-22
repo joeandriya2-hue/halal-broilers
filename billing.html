@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Billing | Halal Broilers ERP</title>
+
+    <link rel="stylesheet" href="css/billing.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <img src="images/logo.png" alt="Logo">
+
+            <h2>HALAL<br>BROILERS</h2>
+
+        </div>
+
+        <ul>
+
+            <li><a href="dashboard.html">🏠 Dashboard</a></li>
+
+            <li><a href="stock.html">📦 Stock</a></li>
+
+            <li class="active"><a href="billing.html">🧾 Billing</a></li>
+
+            <li><a href="customers.html">👥 Customers</a></li>
+
+            <li><a href="reports.html">📊 Reports</a></li>
+
+            <li><a href="settings.html">⚙ Settings</a></li>
+
+            <li><a href="index.html">🚪 Logout</a></li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <div class="header">
+
+            <h1>Billing Management</h1>
+
+            <button id="printBill">
+                🖨 Print Bill
+            </button>
+
+        </div>
+
+        <!-- Customer Details -->
+
+        <div class="card">
+
+            <h2>Customer Details</h2>
+
+            <div class="form-grid">
+
+                <div>
+
+                    <label>Customer Name</label>
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        placeholder="Enter Customer Name">
+
+                </div>
+
+                <div>
+
+                    <label>Shop Name</label>
+
+                    <input
+                        type="text"
+                        id="shopName"
+                        placeholder="Enter Shop Name">
+
+                </div>
+
+                <div>
+
+                    <label>Mobile Number</label>
+
+                    <input
+                        type="text"
+                        id="mobile"
+                        placeholder="Enter Mobile Number">
+
+                </div>
+
+                <div>
+
+                    <label>Bill No</label>
+
+                    <input
+                        type="text"
+                        id="billNo"
+                        value="HB0001"
+                        readonly>
+
+                </div>
+
+                <div>
+
+                    <label>Date</label>
+
+                    <input
+                        type="date"
+                        id="billDate">
+
+                </div>
+
+                <div>
+
+                    <label>Time</label>
+
+                    <input
+                        type="time"
+                        id="billTime">
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Product Details -->
+
+<div class="card">
+
+    <h2>Product Details</h2>
+
+    <div class="form-grid">
+
+        <div>
+
+            <label>Product</label>
+
+            <select id="product">
+
+                <option value="">Select Product</option>
+
+                <option value="Broiler Chicken">Broiler Chicken</option>
+
+                <option value="Giriraja">Giriraja</option>
+
+                <option value="Naatukoli">Naatukoli</option>
+
+                <option value="Kaadai">Kaadai</option>
+
+                <option value="Mutton">Mutton</option>
+
+                <option value="Fish">Fish</option>
+
+            </select>
+
+        </div>
+
+        <!-- Broiler Fields -->
+
+        <div id="paperRateDiv">
+
+            <label>Paper Rate</label>
+
+            <input
+                type="number"
+                id="paperRate"
+                placeholder="Enter Paper Rate">
+
+        </div>
+
+        <div id="estimationDiv">
+
+            <label>Estimation</label>
+
+            <input
+                type="number"
+                step="0.01"
+                id="estimation"
+                placeholder="Example : 1.60">
+
+        </div>
+
+        <!-- Other Product Rate -->
+
+        <div id="rateDiv" style="display:none;">
+
+            <label>Rate</label>
+
+            <input
+                type="number"
+                id="rate"
+                placeholder="Enter Rate">
+
+        </div>
+
+        <div>
+
+            <label>Weight (Kg)</label>
+
+            <input
+                type="number"
+                id="kg"
+                placeholder="Enter Weight">
+
+        </div>
+
+    </div>
+
+    <br>
+
+    <h2>
+
+        Total Amount :
+        ₹ <span id="amount">0.00</span>
+
+    </h2>
+
+    <br>
+
+    <button id="generateBill">
+
+        Generate Bill
+
+    </button>
+
+</div>
+
+<!-- Bill Preview -->
+
+<div class="card">
+
+    <h2>Bill Preview</h2>
+
+    <table>
+
+        <tr>
+            <td><b>Customer</b></td>
+            <td id="billCustomer">-</td>
+        </tr>
+
+        <tr>
+            <td><b>Shop</b></td>
+            <td id="billShop">-</td>
+        </tr>
+
+        <tr>
+            <td><b>Mobile</b></td>
+            <td id="billMobile">-</td>
+        </tr>
+
+        <tr>
+            <td><b>Product</b></td>
+            <td id="billProduct">-</td>
+        </tr>
+
+        <tr>
+            <td><b>Weight</b></td>
+            <td id="billKg">-</td>
+        </tr>
+
+        <tr>
+            <td><b>Total</b></td>
+            <td id="billAmount">₹0.00</td>
+        </tr>
+
+    </table>
+
+</div>
+
+        <!-- Product Section -->
+        <!-- NEXT PART -->
+
+    </main>
+
+    <script src="js/billing.js"></script>
+
+</body>
+
+</html>

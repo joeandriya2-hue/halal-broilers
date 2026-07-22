@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice | Halal Broilers ERP</title>
+
+    <link rel="stylesheet" href="css/invoice.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="invoice">
+
+    <div class="header">
+
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+
+        <div class="company">
+
+            <h3>مَا شَاءَ ٱللَّٰهُ</h3>
+
+            <h1>HALAL <span>BROILERS</span></h1>
+
+            <p>பண்ணை விலையில் கிடைக்கும்</p>
+
+        </div>
+
+    </div>
+
+    <div class="info">
+
+        <div>
+            <i class="fa-solid fa-location-dot"></i>
+            Arisipalayam, Coimbatore
+        </div>
+
+        <div>
+            <i class="fa-solid fa-calendar-days"></i>
+            <span id="billDate"></span>
+        </div>
+
+        <div>
+            <i class="fa-solid fa-clock"></i>
+            <span id="billTime"></span>
+        </div>
+
+    </div>
+
+    <!-- CUSTOMER CARD -->
+
+<div class="customer-card">
+
+    <div class="customer-icon">
+        👤
+    </div>
+
+    <div class="customer-info">
+
+        <small>வாடிக்கையாளர்</small>
+
+        <h2 id="customerName">Customer Name</h2>
+
+        <p>
+            📞
+            <span id="customerMobile">9876543210</span>
+        </p>
+
+        <p>
+            🏪
+            <span id="customerShop">Shop Name</span>
+        </p>
+
+    </div>
+
+</div>
+<!-- ===========================
+        PRODUCT TABLE
+=========================== -->
+
+
+        <!-- ===========================
+            PRODUCT DETAILS
+    ============================ -->
+
+    <div class="products">
+
+        <h2>Product Details</h2>
+
+        <table class="product-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>#</th>
+                    <th>Product</th>
+                    <th>Weight</th>
+                    <th>Rate</th>
+                    <th>Amount</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>1</td>
+
+                    <td id="productName"></td>
+
+                    <td id="weight"></td>
+
+                    <td id="rate"></td>
+
+                    <td id="amount"></td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+    <!-- Total Section -->
+
+<div class="total-section">
+
+    <div class="total-row">
+        <span>Product Total</span>
+        <span id="subTotal">₹ 0.00</span>
+    </div>
+
+    <div class="total-row">
+        <span>Old Balance</span>
+        <span id="oldBalance">₹ 0.00</span>
+    </div>
+
+    <div class="grand-total">
+        <span>Grand Total</span>
+        <span id="grandTotal">₹ 0.00</span>
+    </div>
+
+</div>
+
+
+    <!-- ===========================
+    PRODUCTS AVAILABLE
+=========================== -->
+
+<div class="products-list">
+
+    <div class="product-box">
+        <img src="images/broiler.png" class="product-icon">
+        <span>Broiler Chicken</span>
+    </div>
+
+    <div class="product-box">
+        <img src="images/naatukoli.png" class="product-icon">
+        <span>Naatu Kozhi</span>
+    </div>
+
+    <div class="product-box">
+        <img src="images/kaadai.png" class="product-icon">
+        <span>Kaadai</span>
+    </div>
+
+    <div class="product-box">
+        <img src="images/goat.png" class="product-icon">
+        <span>Mutton</span>
+    </div>
+
+   
+
+</div>
+
+<!-- ===========================
+      THANK YOU
+=========================== -->
+
+<div class="thankyou">
+
+    <h1>THANK YOU</h1>
+
+    <h3>VISIT US AGAIN</h3>
+
+</div>
+
+<!-- ===========================
+      CONTACT
+=========================== -->
+
+<!-- ===========================
+      BUTTONS
+=========================== -->
+
+
+
+
+    <!-- ===========================
+            FOOTER
+    ============================ -->
+
+    <div class="footer">
+
+        <p>
+            ❤️ Thank You for Shopping with Halal Broilers ❤️
+        </p>
+
+        <p>
+            Visit Again
+        </p>
+
+    </div>
+    <div class="enquiry-section">
+
+    <div class="enquiry-card">
+
+        <div class="enquiry-icon">📞</div>
+
+        <h3>FOR ENQUIRY</h3>
+
+        <p>Mohammad Ismail</p>
+
+        <h2>88704 38109</h2>
+
+    </div>
+
+    <div class="enquiry-card">
+
+        <div class="enquiry-icon">👤</div>
+
+        <h3>SAHUL HAMMED</h3>
+
+        <p>Sales Manager</p>
+
+        <h2>98949 15756</h2>
+
+    </div>
+
+</div>
+ 
+
+    <!-- Buttons -->
+
+    <div class="buttons">
+
+        <button onclick="window.print()">
+            🖨 Print Bill
+        </button>
+
+        <button id="downloadPdf">
+            📄 Download PDF
+        </button>
+
+        <button id="shareWhatsapp">
+            📲 WhatsApp Share
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="js/invoice.js"></script>
+
+</body>
+</html>

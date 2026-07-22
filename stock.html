@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Management | Halal Broilers ERP</title>
+
+    <link rel="stylesheet" href="css/stock.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>📦 Stock Management</h1>
+
+        <div class="stock-card">
+
+            <div class="form-group">
+                <label>Product</label>
+
+                <select id="product">
+                    <option>Broiler Chicken</option>
+                    <option>Giriraja</option>
+                    <option>Naatukoli</option>
+                    <option>Kaadai</option>
+                    <option>Mutton</option>
+                    <option>Fish</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Available Stock (Kg)</label>
+                <input type="number" id="stockKg" placeholder="Enter Stock">
+            </div>
+
+            <button id="saveStock">
+                Save Stock
+            </button>
+
+        </div>
+
+        <br>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Product</th>
+                    <th>Available Stock</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="stockTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script src="js/stock.js"></script>
+
+</body>
+
+</html>
