@@ -197,3 +197,54 @@ tr:hover{
     }
 
 }
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+@media (max-width:768px){
+
+    .container{
+        width:100%;
+        padding:15px;
+    }
+
+    h1{
+        font-size:28px;
+        text-align:center;
+    }
+
+    .stock-card{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+        width:100%;
+        padding:20px;
+    }
+
+    .form-group{
+        width:100%;
+    }
+
+    .form-group label{
+        display:block;
+        margin-bottom:8px;
+    }
+
+    .form-group select,
+    .form-group input{
+        width:100%;
+    }
+
+    #saveStock{
+        width:100%;
+        margin-top:10px;
+    }
+
+    table{
+        width:100%;
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+}
