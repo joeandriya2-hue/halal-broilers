@@ -602,47 +602,15 @@ CONTACT
 BUTTONS
 =========================== */
 
-.invoice-buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:20px;
-
-    margin:40px;
-
+..invoice{
+    width:95%;
+    max-width:850px;
+    margin:auto;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
-
-.invoice-buttons button{
-
-    background:#0d6b33;
-
-    color:white;
-
-    border:none;
-
-    padding:15px 35px;
-
-    border-radius:12px;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-}
-
-.invoice-buttons button:hover{
-
-    background:#094d24;
-
-}url(../../../../../Downloads/goat.jpg)
-.invoice-container{
-    position:relative;
-    min-height:1500px;   /* A4 height */
-    padding-bottom:180px;
-}
-
 /* ===========================
    ENQUIRY SECTION
 =========================== */
@@ -781,4 +749,82 @@ BUTTONS
 
     margin-bottom:18px;
 
+}
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+
+@media screen and (max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+    .invoice{
+        width:100%;
+        border-radius:10px;
+    }
+
+    .header{
+        flex-direction:column;
+        padding:20px;
+    }
+
+    .logo img{
+        width:180px;
+    }
+
+    .company h1{
+        font-size:34px;
+    }
+
+    .company h3{
+        font-size:22px;
+    }
+
+    .company p{
+        font-size:16px;
+    }
+
+    .info{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+    .customer-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .customer-info h2{
+        font-size:28px;
+    }
+
+    .customer-info p{
+        justify-content:center;
+        font-size:16px;
+    }
+
+    .product-table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    .products-list{
+        flex-wrap:wrap;
+    }
+
+    .enquiry-section{
+        flex-direction:column;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .buttons button{
+        width:100%;
+    }
 }
