@@ -158,3 +158,42 @@ tr:hover{
     cursor:pointer;
 
 }
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+@media screen and (max-width:768px){
+
+    body{
+        padding:15px;
+    }
+
+    .container{
+        width:100%;
+        padding:0;
+    }
+
+    .stock-form{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+        width:100%;
+    }
+
+    .stock-form select,
+    .stock-form input,
+    .stock-form button{
+        width:100%;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    h1{
+        font-size:36px;
+    }
+
+}
