@@ -27,23 +27,46 @@ h1{
 
 }
 
-.stock-card{
+@media (max-width:768px){
 
-    background:#fff;
-    border-radius:15px;
-    padding:25px;
+    body{
+        padding:15px;
+    }
 
-    display:grid;
-    grid-template-columns:1fr 1fr auto;
+    .container{
+        width:100%;
+        max-width:100%;
+        padding:0;
+    }
 
-    gap:20px;
+    .stock-card{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:15px;
+        padding:20px;
+    }
 
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    .form-group{
+        width:100%;
+    }
 
-    margin-bottom:30px;
+    input,
+    select,
+    button{
+        width:100%;
+    }
 
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    h1{
+        font-size:30px;
+        text-align:center;
+    }
 }
-
 .form-group{
 
     display:flex;
@@ -78,25 +101,16 @@ select:focus{
 }
 
 button{
-
     background:#0b6b38;
     color:#fff;
-
     border:none;
-
     padding:14px 25px;
-
     border-radius:10px;
-
     cursor:pointer;
-
     font-size:16px;
     font-weight:600;
-
-    align-self:end;
-
+    width:100%;
     transition:.3s;
-
 }
 
 button:hover{
