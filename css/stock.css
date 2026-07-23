@@ -1,3 +1,8 @@
+/* ======================================
+   HALAL BROILERS ERP
+   BILLING PAGE
+====================================== */
+
 *{
     margin:0;
     padding:0;
@@ -6,259 +11,342 @@
 }
 
 body{
-
-    background:#f5f5f5;
-    padding:40px;
-
-}
-
-.container{
-
-    max-width:1200px;
-    margin:auto;
-
-}
-
-h1{
-
-    color:#0b6b38;
-    margin-bottom:25px;
-    font-size:34px;
-
-}
-
-@media (max-width:768px){
-
-    body{
-        padding:15px;
-    }
-
-    .container{
-        width:100%;
-        max-width:100%;
-        padding:0;
-    }
-
-    .stock-card{
-        display:grid;
-        grid-template-columns:1fr;
-        gap:15px;
-        padding:20px;
-    }
-
-    .form-group{
-        width:100%;
-    }
-
-    input,
-    select,
-    button{
-        width:100%;
-    }
-
-    table{
-        display:block;
-        overflow-x:auto;
-        white-space:nowrap;
-    }
-
-    h1{
-        font-size:30px;
-        text-align:center;
-    }
-}
-.form-group{
-
     display:flex;
-    flex-direction:column;
-
+    background:#121212;
+    color:#fff;
 }
 
-label{
+/* ===========================
+   SIDEBAR
+=========================== */
 
-    margin-bottom:8px;
-    font-weight:600;
-    color:#444;
-
+.sidebar{
+    width:250px;
+    height:100vh;
+    position:fixed;
+    left:0;
+    top:0;
+    background:#1b1b1b;
+    border-right:3px solid #d4af37;
+    overflow-y:auto;
 }
 
-input,
-select{
+.logo{
+    text-align:center;
+    padding:25px;
+}
 
-    padding:12px;
-    border:2px solid #ddd;
+.logo img{
+    width:90px;
+    margin-bottom:10px;
+}
+
+.logo h2{
+    color:#d4af37;
+    font-size:22px;
+}
+
+.sidebar ul{
+    list-style:none;
+    margin-top:20px;
+}
+
+.sidebar ul li{
+    margin:8px 15px;
+}
+
+.sidebar ul li a{
+    display:block;
+    padding:14px;
+    text-decoration:none;
+    color:#fff;
     border-radius:10px;
-    font-size:16px;
-
+    transition:.3s;
 }
 
-input:focus,
-select:focus{
+.sidebar ul li a:hover,
+.sidebar ul li.active a{
+    background:#d4af37;
+    color:#111;
+    font-weight:600;
+}
 
+/* ===========================
+   MAIN
+=========================== */
+
+.main{
+    margin-left:250px;
+    width:calc(100% - 250px);
+    padding:35px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.header h1{
+    font-size:30px;
+    color:#d4af37;
+}
+
+.header button{
+    background:#d4af37;
+    color:#111;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.header button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 15px rgba(212,175,55,.35);
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.card{
+    background:#1f1f1f;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:25px;
+    border:1px solid #333;
+    box-shadow:0 10px 20px rgba(0,0,0,.35);
+}
+
+.card h2{
+    color:#d4af37;
+    margin-bottom:20px;
+}
+/* ===========================
+   FORM GRID
+=========================== */
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.form-grid label{
+    display:block;
+    margin-bottom:8px;
+    font-size:14px;
+    color:#ccc;
+    font-weight:500;
+}
+
+.form-grid input,
+.form-grid select{
+    width:100%;
+    padding:13px 15px;
+    border:1px solid #444;
+    border-radius:10px;
+    background:#2b2b2b;
+    color:#fff;
+    font-size:15px;
+    transition:.3s;
+}
+
+.form-grid input:focus,
+.form-grid select:focus{
     outline:none;
-    border-color:#0b6b38;
-
+    border-color:#d4af37;
+    box-shadow:0 0 10px rgba(212,175,55,.25);
 }
 
-button{
+/* ===========================
+   PRODUCT SECTION
+=========================== */
+
+#paperRateDiv,
+#estimationDiv,
+#rateDiv{
+    width:100%;
+}
+
+#amount{
+    color:#00ff99;
+    font-size:30px;
+    font-weight:bold;
+}
+
+#generateBill{
+    width:100%;
+    margin-top:20px;
     background:#0b6b38;
     color:#fff;
     border:none;
-    padding:14px 25px;
+    padding:15px;
     border-radius:10px;
     cursor:pointer;
-    font-size:16px;
+    font-size:17px;
     font-weight:600;
+    transition:.3s;
+}
+
+#generateBill:hover{
+    background:#0d8b49;
+}
+/* ===========================
+   BILL PREVIEW
+=========================== */
+
+table{
     width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+table tr{
+    border-bottom:1px solid #333;
+}
+
+table td{
+    padding:14px;
+    font-size:15px;
+}
+
+table td:first-child{
+    color:#d4af37;
+    font-weight:600;
+    width:35%;
+}
+
+table td:last-child{
+    color:#fff;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+button{
     transition:.3s;
 }
 
 button:hover{
-
-    background:#0d8c49;
-
+    transform:translateY(-2px);
+    box-shadow:0 0 12px rgba(212,175,55,.35);
 }
 
-table{
+/* ===========================
+   CARD ANIMATION
+=========================== */
 
-    width:100%;
-    border-collapse:collapse;
-
-    background:#fff;
-
-    border-radius:15px;
-    overflow:hidden;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-
+.card{
+    transition:.3s;
 }
 
-thead{
-
-    background:#0b6b38;
-    color:#fff;
-
+.card:hover{
+    box-shadow:0 12px 30px rgba(0,0,0,.45);
 }
 
-th{
+/* ===========================
+   INPUT PLACEHOLDER
+=========================== */
 
-    padding:18px;
-    text-align:center;
-
+input::placeholder{
+    color:#999;
 }
 
-td{
-
-    padding:18px;
-    text-align:center;
-
-    border-bottom:1px solid #eee;
-
-}
-
-tr:hover{
-
-    background:#f8fff9;
-
-}
-
-.action-btn{
-
-    background:#d4af37;
-    color:#fff;
-    padding:8px 14px;
-    border:none;
-    border-radius:8px;
+select{
     cursor:pointer;
-
 }
-/* ==========================
+/* ===========================
    MOBILE RESPONSIVE
-========================== */
-
-@media screen and (max-width:768px){
-
-    body{
-        padding:15px;
-    }
-
-    .container{
-        width:100%;
-        padding:0;
-    }
-
-    .stock-form{
-        display:flex;
-        flex-direction:column;
-        gap:15px;
-        width:100%;
-    }
-
-    .stock-form select,
-    .stock-form input,
-    .stock-form button{
-        width:100%;
-    }
-
-    table{
-        display:block;
-        overflow-x:auto;
-        white-space:nowrap;
-    }
-
-    h1{
-        font-size:36px;
-    }
-
-}
-/* ==========================
-   MOBILE RESPONSIVE
-========================== */
+=========================== */
 
 @media (max-width:768px){
 
-    .container{
+    body{
+        display:block;
+        padding:0;
+    }
+
+    /* Sidebar Hide */
+    .sidebar{
+        display:none;
+    }
+
+    /* Main */
+    .main{
+        margin-left:0;
         width:100%;
         padding:15px;
     }
 
-    h1{
-        font-size:28px;
+    /* Header */
+    .header{
+        flex-direction:column;
+        align-items:stretch;
+        gap:15px;
+    }
+
+    .header h1{
+        font-size:24px;
         text-align:center;
     }
 
-    .stock-card{
-        display:flex;
-        flex-direction:column;
+    .header button{
+        width:100%;
+    }
+
+    /* Card */
+    .card{
+        padding:15px;
+        border-radius:12px;
+    }
+
+    /* Form */
+    .form-grid{
+        grid-template-columns:1fr;
         gap:15px;
+    }
+
+    .form-grid input,
+    .form-grid select{
         width:100%;
-        padding:20px;
+        font-size:16px;
     }
 
-    .form-group{
-        width:100%;
-    }
-
-    .form-group label{
-        display:block;
-        margin-bottom:8px;
-    }
-
-    .form-group select,
-    .form-group input{
+    /* Buttons */
+    #generateBill{
         width:100%;
     }
 
-    #saveStock{
-        width:100%;
-        margin-top:10px;
+    /* Amount */
+    #amount{
+        font-size:26px;
     }
 
+    /* Table */
     table{
-        width:100%;
         display:block;
         overflow-x:auto;
         white-space:nowrap;
+        width:100%;
     }
 
+    table td{
+        font-size:14px;
+        padding:12px;
+    }
+
+    h2{
+        font-size:20px;
+    }
 }
